@@ -55,4 +55,8 @@ jobs:
         run: |
           echo it is from test1 job,
           echo focus on your job!!!.
-
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.6.0
+        with:
+          name: Build-artifact
+          path: ${{github.workspace}}
